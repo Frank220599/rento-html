@@ -1,0 +1,942 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orento</title>
+    <link rel="stylesheet" href="./css/libs.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body>
+<div class="header">
+    <div class="headerTop">
+        <div class='container d-flex'>
+            <div class='d-flex'>
+                <p>Местоположение:</p>
+                <div class="location">
+                    <img src="./img/location.png" class="icon">
+                    <p>Ташкент</p>
+                </div>
+            </div>
+            <div class="headerTopLeft">
+                <div class="leftItem">
+                    <img src="./img/favorite.png">
+                    <p>Избранный</p>
+                </div>
+                <div class="leftItem">
+                    <img src="./img/language.png">
+                    <p>Язык <span>Русский</span></p>
+                </div>
+
+                <div class="headerProfile">
+                    <div id="dr" class="a-center">
+                        <img src="./img/img.png" alt=""/>
+                        <p style="margin-right: 10px; margin-left: 10px">Мой профиль</p>
+                        <ChevronDownIcon/>
+                    </div>
+                    <div class="dropdownMenu">
+                        <div class="balanceInfo">
+                            <div>
+                                <p>Баланс:</p>
+                                <p>ID: 12908172</p>
+                            </div>
+                            <div>
+                                <p>15 000 uzs</p>
+                            </div>
+                        </div>
+                        <a class="paymentLink">
+                            Пополнить
+                        </a>
+                        <div class="dropDownLinks">
+                            <a>Моя страница</a>
+                            <a>Сообщение</a>
+                            <a>Настройки</a>
+                            <a onClick=logout>Выйти</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="leftItem">
+                    <img src="./img/user.png">
+                    <a href="./signin.html">Войти</a>/
+                    <a href="./signup.html">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="headerBottom">
+        <div class="container">
+            <a href="/">
+                <img src="./img/logo.png">
+            </a>
+            <div class="filter">
+                <p class="active">Аренда</p>
+                <p>С выкупом</p>
+                <p>Продаётся</p>
+                <p>Отдам даром</p>
+            </div>
+            <a class="button">
+                <p>+ Подать объявления</p>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <form class="mainFilter">
+        <div class="mainFilterField searchField">
+            <img src="./img/search.png">
+            <input type="text" placeholder="Поиск"/>
+        </div>
+        <div class="nav_dropdown">
+            <div class="mainFilterField">
+                <img src="./img/categories.png">
+                <input type="text" disabled placeholder="Категория"/>
+                <img src="./img/chevronDown.png">
+            </div>
+            <ul class="dropdownMenu_wrapper" id="categoriesSelect">
+                <li>
+                    <div>Books</div>
+                </li>
+                <li>
+                    <div>Clothing</div>
+                </li>
+                <li>
+                    <div>Electronics</div>
+                    <ul>
+                        <li>
+                            <div>Car Hifi</div>
+                        </li>
+                        <li>
+                            <div>Utilities</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div>Movies</div>
+                </li>
+                <li>
+                    <div>Music</div>
+                    <ul>
+                        <li>
+                            <div>Rock</div>
+                            <ul>
+                                <li>
+                                    <div>Alternative</div>
+                                </li>
+                                <li>
+                                    <div>Classic</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>Jazz</div>
+                            <ul>
+                                <li>
+                                    <div>Freejazz</div>
+                                </li>
+                                <li>
+                                    <div>Big Band</div>
+                                </li>
+                                <li>
+                                    <div>Modern</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>Pop</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="nav_dropdown">
+            <div class="mainFilterField">
+                <img src="./img/location2.png">
+                <input type="text" disabled placeholder="г.Ташкент"/>
+                <img src="./img/chevronDown.png">
+            </div>
+            <ul class="dropdownMenu_wrapper" id="regionsSelect">
+                <li>
+                    <div>Books</div>
+                </li>
+                <li>
+                    <div>Clothing</div>
+                </li>
+                <li>
+                    <div>Electronics</div>
+                    <ul>
+                        <li>
+                            <div>Car Hifi</div>
+                        </li>
+                        <li>
+                            <div>Utilities</div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div>Movies</div>
+                </li>
+                <li>
+                    <div>Music</div>
+                    <ul>
+                        <li>
+                            <div>Rock</div>
+                            <ul>
+                                <li>
+                                    <div>Alternative</div>
+                                </li>
+                                <li>
+                                    <div>Classic</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>Jazz</div>
+                            <ul>
+                                <li>
+                                    <div>Freejazz</div>
+                                </li>
+                                <li>
+                                    <div>Big Band</div>
+                                </li>
+                                <li>
+                                    <div>Modern</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div>Pop</div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="mainFilterField selectDate1">
+            <img src="./img/calendar.png">
+            <input type="text" id="datepicker" placeholder="20/06/2020"/>
+        </div>
+        <div class="mainFilterField selectDate2">
+            <img src="./img/calendar.png">
+            <input type="text" id="datepicker2" placeholder="20/06/2020"/>
+        </div>
+        <button type="submit" class="searchButton"><p>Показать</p></button>
+    </form>
+</div>
+<div class="container">
+    <div class="toggleCategories">
+        <p>закрыт категории</p>
+    </div>
+    <div class="mainCategoriesList active">
+        <a href="#" class="categoryItem" style="background-color: #EEAE73">
+            <p>Транспорт</p>
+            <span>314</span>
+            <div class="categoryImage">
+                <img src="./img/1.png"/>
+            </div>
+        </a>
+        <a href="#" class="categoryItem" style="background-color: #FFAFAF">
+            <p>Недвижимость</p>
+            <span>314</span>
+            <div class="categoryImage">
+                <img src="./img/2.png"/>
+            </div>
+        </a>
+        <a href="#" class="categoryItem" style="background-color: #7573EE">
+            <p>Электроника</p>
+            <span>314</span>
+            <div class="categoryImage">
+                <img src="./img/3.png"/>
+            </div>
+        </a>
+        <a href="#" class="categoryItem" style="background-color: #48AEFF">
+            <p>Коммерческие помещения</p>
+            <span>314</span>
+            <div class="categoryImage">
+                <img src="./img/4.png"/>
+            </div>
+        </a>
+        <a href="#" class="categoryItem" style="background-color: #FF906C">
+            <p>Бытовая техника</p>
+            <span>314</span>
+            <div class="categoryImage">
+                <img src="./img/5.png"/>
+            </div>
+        </a>
+        <a href="#" class="categoryItem" style="background-color: #F4D35C">
+            <p>Спецтехника</p>
+            <span>314</span>
+            <div class="categoryImage">
+                <img src="./img/6.png"/>
+            </div>
+        </a>
+        <a href="#" class="categoryItem" style="background-color: #58C850">
+            <p>Земельные участки</p>
+            <span>314</span>
+            <div class="categoryImage">
+                <img src="./img/7.png"/>
+            </div>
+        </a>
+        <a href="#" class="categoryItem" style="background-color: #0F4168">
+            <p>Оборудование</p>
+            <span>314</span>
+            <div class="categoryImage">
+                <img src="./img/8.png"/>
+            </div>
+        </a>
+        <a href="#" class="categoryItem" style="background-color: #EEAE73">
+            <p>Детский мир</p>
+            <span>314</span>
+            <div class="categoryImage">
+                <img src="./img/9.png"/>
+            </div>
+        </a>
+        <a href="#" class="categoryItem" style="background-color: #415573">
+            <p>Прочее</p>
+            <span>314</span>
+            <div class="categoryImage">
+                <img src="./img/10.png"/>
+            </div>
+        </a>
+    </div>
+</div>
+<div>
+    <div class="listHeader">
+        <div class="container">
+            <p>Последние добавленные + 1053</p>
+            <div class="listHeaderFunctions">
+                <div class="pop_up_sort_wrapper">
+                    <img src="./img/sort.png">
+                    <p>Сотировать</p>
+                    <div class="pop_up_sort_inner">
+                        <span class="active">
+                            <img src="./img/desc.svg" alt="">
+                            <p>По убивание</p>
+                        </span>
+                        <span>
+                            <img src="./img/desc.svg" alt="">
+                            <p>По возрастанию</p>
+                        </span>
+                    </div>
+                </div>
+
+                <div id="filtr" class="cp">
+                    <img src="./img/filter.png">
+                    <p>Фильтр</p>
+                </div>
+                <!--                <img src="./img/list.png">-->
+                <!--                <img src="./img/grid.png">-->
+            </div>
+        </div>
+    </div>
+    <div class="container filtersWrapper">
+        <div class="filtersContainer">
+            <div class="customInputWrapper">
+                <div class="inputLabel">Регион</div>
+                <div class="customInput">
+                    <input value="Узбекистан, Ташкент."/>
+                    <img src="./img/chevronDown2.png" alt="">
+                </div>
+            </div>
+            <div class="customInputWrapper">
+                <div class="inputLabel">Регион</div>
+                <div class="customInput">
+                    <input value="Узбекистан, Ташкент."/>
+                    <img src="./img/chevronDown2.png" alt="">
+                </div>
+            </div>
+            <div class="customInputWrapper">
+                <div class="inputLabel">Регион</div>
+                <div class="customInput">
+                    <input value="Узбекистан, Ташкент."/>
+                    <img src="./img/chevronDown2.png" alt="">
+                </div>
+            </div>
+            <div id="regionFilter" class="customInputWrapper">
+                <div class="inputLabel">Регион</div>
+                <div class="customInput">
+                    <input value="Узбекистан, Ташкент."/>
+                    <img src="./img/chevronDown2.png" alt="">
+                </div>
+            </div>
+            <div class="filterDropdown">
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+                <p>Uzbekistan</p>
+            </div>
+            <div class="customInputWrapper">
+                <div class="inputLabel">Регион</div>
+                <div class="customInput">
+                    <input value="Узбекистан, Ташкент."/>
+                    <img src="./img/chevronDown2.png" alt="">
+                </div>
+            </div>
+            <div class="annPrice">
+                <div class="customInputWrapper">
+                    <div class="inputLabel">Цена</div>
+                    <div class="customInput">
+                        <input placeholder='От (у.е)'/>
+                    </div>
+                </div>
+                <div class="customInputWrapper">
+                    <div class="inputLabel">&nbsp;</div>
+                    <div class="customInput">
+                        <input placeholder='До (у.е)'/>
+                    </div>
+                </div>
+            </div>
+            <div class="annPrice">
+                <div class="customInputWrapper">
+                    <div class="inputLabel">Выбрать дату</div>
+                    <div class="customInput">
+                        <input placeholder='От'/>
+                        <img src="./img/calendar.png" alt="">
+
+                    </div>
+                </div>
+                <div class="customInputWrapper">
+                    <div class="inputLabel">&nbsp;</div>
+                    <div class="customInput">
+                        <input placeholder='До'/>
+                        <img src="./img/calendar.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="annPrice">
+                <div class="customInputWrapper">
+                    <div class="inputLabel">Год выпуска</div>
+                    <div class="customInput">
+                        <input placeholder='От (у.е)'/>
+                    </div>
+                </div>
+                <div class="customInputWrapper">
+                    <div class="inputLabel">&nbsp;</div>
+                    <div class="customInput">
+                        <input placeholder='До (у.е)'/>
+                    </div>
+                </div>
+            </div>
+            <div class="customInputWrapper">
+                <div class="inputLabel">&nbsp;</div>
+                <div class="customCheckbox">
+                    <input id="fa1" name="type1" hidden type='radio'/>
+                    <label for="fa1">
+                        Механика
+                    </label>
+                    <span></span>
+                    <input id="ma1" name="type1" hidden type='radio'/>
+                    <label for="ma1">
+                        Автомат
+                    </label>
+                </div>
+            </div>
+            <div class="customInputWrapper">
+                <div class="inputLabel">&nbsp;</div>
+                <div class="customCheckbox">
+                    <input id="fa" name="type" checked hidden type='radio'/>
+                    <label for="fa">
+                        Физ. лицо
+                    </label>
+                    <span></span>
+                    <input id="ma" name="type" hidden type='radio'/>
+                    <label for="ma">
+                        Юр. лицо
+                    </label>
+                </div>
+            </div>
+            <div class="customInputWrapper">
+                <div class="inputLabel">&nbsp;</div>
+                <div class="customSwitch">
+                    <p>Толька с фото</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="filterSave">
+            <div class="addAnnSave">
+                <!--<p>Расширенный фильтр</p>-->
+                <p></p>
+                <button type="submit">Сохранить</button>
+                <p>Сбросить фильтр</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="announcementList">
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="showMore">
+            <div>Еще</div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="mobileApp">
+        <div class="mobileAppLeft">
+            <img src="./img/MobileApp.png" alt=""/>
+            <img src="./img/circles.png" class='circles' alt=""/>
+        </div>
+        <div class="mobileAppRight">
+            <p class='mobileAppTitle'>Download app <br/>from</p>
+            <p>Все бесплатно толька для вас )</p>
+            <div class='downloadLinks'>
+                <div class="downloadLink">
+                    <img src="./img/playmarket.png" alt=""/>
+                    <div>
+                        <p>GET IT ON</p>
+                        <p>Google Play</p>
+                    </div>
+                </div>
+                <div class="downloadLink">
+                    <img src="./img/appstpre.png" alt=""/>
+                    <div>
+                        <p>Available on the</p>
+                        <p>App Store</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="socialsWrapper">
+    <div class="container ">
+        <div class="socials">
+            <img src="./img/logo.png" alt="">
+            <div class="socialLinks">
+                <div class="socialLink">
+                    <img src="./img/fb.png" alt="">
+                    <p>Facebook</p>
+                </div>
+                <div class="socialLink">
+                    <img src="./img/instagram.png" alt="">
+                    <p>Instagram</p>
+                </div>
+                <div class="socialLink">
+                    <img src="./img/tg.png" alt="">
+                    <p>Telegram</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="bordered">
+        <div class="container">
+            <div class="footerCategories">
+                <div class="footerCategory">
+                    <p class="footerCategoryTitle">Транспорт</p>
+                    <div class="footerCategoryLists">
+                        <div class="footerCategoryList">
+                            <p>Легковой</p>
+                            <p>Грузовой</p>
+                            <p>Мото</p>
+                            <p>Автобус</p>
+                            <p>Миниавтобус</p>
+                            <p>Микро автобус</p>
+                            <p>Трактор</p>
+                            <p>Прицепы</p>
+                            <p>Средства Спец.техники</p>
+                        </div>
+                        <div class="footerCategoryList">
+                            <p>Легковой</p>
+                            <p>Грузовой</p>
+                            <p>Мото</p>
+                            <p>Автобус</p>
+                            <p>Миниавтобус</p>
+                            <p>Микро автобус</p>
+                            <p>Трактор</p>
+                            <p>Прицепы</p>
+                            <p>Средства Спец.техники</p>
+                        </div>
+                        <div class="footerCategoryList">
+                            <p>Легковой</p>
+                            <p>Грузовой</p>
+                            <p>Мото</p>
+                            <p>Автобус</p>
+                            <p>Миниавтобус</p>
+                            <p>Микро автобус</p>
+                            <p>Трактор</p>
+                            <p>Прицепы</p>
+                            <p>Средства Спец.техники</p>
+                        </div>
+                        <div class="footerCategoryList">
+                            <p>Легковой</p>
+                            <p>Грузовой</p>
+                            <p>Мото</p>
+                            <p>Автобус</p>
+                            <p>Миниавтобус</p>
+                            <p>Микро автобус</p>
+                            <p>Трактор</p>
+                            <p>Прицепы</p>
+                            <p>Средства Спец.техники</p>
+                        </div>
+                        <div class="footerCategoryList">
+                            <p>Легковой</p>
+                            <p>Грузовой</p>
+                            <p>Мото</p>
+                            <p>Автобус</p>
+                            <p>Миниавтобус</p>
+                            <p>Микро автобус</p>
+                            <p>Трактор</p>
+                            <p>Прицепы</p>
+                            <p>Средства Спец.техники</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footerCategories">
+            <div class="footerCategory">
+                <p class="footerCategoryTitle">Недвижимость</p>
+                <div class="footerCategoryLists">
+                    <div class="footerCategoryList">
+                        <p>Дачи</p>
+                        <p>Дом</p>
+                        <p>Земля</p>
+                        <p>Квартиры Новостройки</p>
+                        <p>Гаражи / стоянки</p>
+                    </div>
+                    <div class="footerCategoryList">
+                        <p>Кирпичный</p>
+                        <p>Панельный Монолитный</p>
+                        <p>Блочный</p>
+                        <p>Деревянный</p>
+                    </div>
+                    <div class="footerCategoryList">
+                        <p>Смежная</p>
+                        <p>Раздельная</p>
+                        <p>Смежно-раздельная</p>
+                        <p>Студия</p>
+                        <p>Пентхаус</p>
+                        <p>Многоуровневая Малосемейка</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footerCategory">
+                <p class="footerCategoryTitle">Электроника</p>
+                <div class="footerCategoryLists">
+                    <div class="footerCategoryList">
+                        <p>Аудиотехника</p>
+                        <p>Компьютеры</p>
+                        <p>Встраиваемая техника</p>
+                        <p>Гаджеты, планшеты и аксессуары</p>
+                        <p>Игры и игровые приставки</p>
+                        <p>Климатическое оборудование</p>
+                    </div>
+                    <div class="footerCategoryList">
+                        <p>Мобильные телефоны</p>
+                        <p>Прочая электроника</p>
+                        <p>Тв / видеотехника</p>
+                        <p>Техника для кухни </p>
+                        <p>Фото и видео</p>
+                    </div>
+                    <div class="footerCategoryList">
+                        <p>Мобильные телефоны</p>
+                        <p>Прочая электроника</p>
+                        <p>Тв / видеотехника</p>
+                        <p>Техника для кухни </p>
+                        <p>Фото и видео</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./js/libs.min.js"></script>
+<script src="./js/main.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#datepicker").datepicker();
+        $("#datepicker2").datepicker();
+
+        $("#categoriesSelect").menu();
+        $("#regionsSelect").menu();
+
+    });
+</script>
+</body>
+
+</html>

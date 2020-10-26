@@ -1,0 +1,21 @@
+@media (min-width: 576px) {
+  .announcementItem {
+    width: calc(100% / 2 - 30px);
+  }
+}
+
+@media (min-width: 768px) {
+  .announcementItem {
+    width: calc(100% / 3 - 30px);
+  }
+}
+
+@media (min-width: 992px) {
+  .announcementItem {
+    width: calc(100% / 4 - 30px);
+  }
+}
+
+@media (min-width: 1200px) {
+
+}

@@ -1,0 +1,641 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orento</title>
+    <link rel="stylesheet" href="./css/libs.min.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+<div class="header">
+    <div class="headerTop">
+        <div class='container d-flex'>
+            <div class='d-flex'>
+                <p>Местоположение:</p>
+                <div class="location">
+                    <img src="./img/location.png" class="icon">
+                    <p>Ташкент</p>
+                </div>
+            </div>
+            <div class="headerTopLeft">
+                <div class="leftItem">
+                    <img src="./img/favorite.png">
+                    <p>Избранный</p>
+                </div>
+                <div class="leftItem">
+                    <img src="./img/language.png">
+                    <p>Язык <span>Русский</span></p>
+                </div>
+
+                <!--                <div class="headerProfile">-->
+                <!--                    <img src=user.data.avatar_url alt=""/>-->
+                <!--                    <p style="margin-right: 10px; margin-left: 10px">Мой профиль</p>-->
+                <!--                    <ChevronDownIcon/>-->
+                <!--                    <div class="dropdownMenu">-->
+                <!--                        <div class="balanceInfo">-->
+                <!--                            <div>-->
+                <!--                                <p>Баланс:</p>-->
+                <!--                                <p>ID: 12908172</p>-->
+                <!--                            </div>-->
+                <!--                            <div>-->
+                <!--                                <p>15 000 uzs</p>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                        <a class="paymentLink">-->
+                <!--                            Пополнить-->
+                <!--                        </a>-->
+                <!--                        <div class="dropDownLinks">-->
+                <!--                            <a>Моя страница</a>-->
+                <!--                            <a>Сообщение</a>-->
+                <!--                            <a>Настройки</a>-->
+                <!--                            <a onClick=logout>Выйти</a>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+                <div class="leftItem">
+                    <img src="./img/user.png">
+                    <a href="./signin.html">Войти</a>/
+                    <a href="./signup.html">Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="headerBottom">
+        <div class="container">
+            <a href="/">
+                <img src="./img/logo.png">
+            </a>
+            <div class="filter">
+                <p class="active">Аренда</p>
+                <p>С выкупом</p>
+                <p>Продаётся</p>
+                <p>Отдам даром</p>
+            </div>
+            <a class="button">
+                <p>+ Подать объявления</p>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="breadcrumb">
+        <img src="./img/back.png" alt="">
+        <p>Назад/Главная/Транспорт/Легковыемашины/Camaro</p>
+    </div>
+    <div class="announcementInfo">
+        <div class="announcementInfoTop">
+            <div class="announcementGallery">
+                <div class="swiper-container gallery-top">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                </div>
+                <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(./img/img.png)"></div>
+                    </div>
+                </div>
+                <div class="viewInfo">
+                    <div>
+                        <span>Опубликована</span>
+                        <p>10 июня, 23:56</p>
+                    </div>
+                    <div>
+                        <span>Просмотры:</span>
+                        <p>880 пользователь</p>
+                    </div>
+                </div>
+            </div>
+            <div class="announcementInfoBlock">
+                <div class="announcementTitle">
+                    <p>Сдаётся на аренду Chevrolet Camaro GT36</p>
+                </div>
+                <div class="descWrapper">
+                    <div class="descTop">
+                        <p>Описание</p>
+                        <div class="itemFunc">
+                            <img src="./img/fav.png" alt="">
+                            <div>
+                                <img src="./img/share.png" alt="">
+                                Поделится
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announcementInfoDesc">
+                        <p>
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                            an unknown printer took a galley of type and scrambled it to make a type specimen
+                            book.
+                        </p>
+                    </div>
+                </div>
+                <div class="priceWrapper">
+                    <p>Цена</p>
+                    <span>500 y.e/месяц</span>
+                </div>
+                <div class="author">
+                    <p class="borderLabel">Автор</p>
+                    <div class="profileHeaderLeft">
+                        <img src="./img/placeholderUser.png" alt=""/>
+                        <div class="profileInfo">
+                            <p>Анастасия Цой</p>
+                            <a href="#">Все обновлении автора</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="infoButtons">
+                    <a to='/'>Написать</a>
+                    <div>Позвонить</div>
+                </div>
+            </div>
+        </div>
+        <div class="announcementMiddle">
+            <div class="announcementRentTime">
+                <p class="middleTitle">Дата выдача аренду</p>
+                <div>
+                    <div>
+                        <span>От</span>
+                        <p>10 июня, 2020</p>
+                    </div>
+                    <div>
+                        <span>До</span>
+                        <p>+ ∞</p>
+                    </div>
+                </div>
+            </div>
+            <div class="announcementDocuments">
+                <p class="middleTitle">Документы</p>
+                <div class="documentsList">
+                    <div class="documentItem">
+                        <img src="./img/excel.png" alt="">
+                        <p>Приказ об устоновление
+                            домашных условиях...</p>
+                    </div>
+                    <div class="documentItem">
+                        <img src="./img/excel.png" alt="">
+                        <p>Приказ об устоновление
+                            домашных условиях...</p>
+                    </div>
+                    <div class="documentItem">
+                        <img src="./img/excel.png" alt="">
+                        <p>Приказ об устоновление
+                            домашных условиях...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parametersWrapper">
+            <p class="borderLabel">Параметры</p>
+            <div class="parameters">
+                <div class="parameterItem">
+                    <span>Город:</span>
+                    <p>Самарканд</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Тип:</span>
+                    <p>Легкоые</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Марка:</span>
+                    <p>BMW</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Город:</span>
+                    <p>Самарканд</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Тип:</span>
+                    <p>Легкоые</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Марка:</span>
+                    <p>BMW</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Город:</span>
+                    <p>Самарканд</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Тип:</span>
+                    <p>Легкоые</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Марка:</span>
+                    <p>BMW</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Город:</span>
+                    <p>Самарканд</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Тип:</span>
+                    <p>Легкоые</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Марка:</span>
+                    <p>BMW</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Город:</span>
+                    <p>Самарканд</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Тип:</span>
+                    <p>Легкоые</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Марка:</span>
+                    <p>BMW</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Город:</span>
+                    <p>Самарканд</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Тип:</span>
+                    <p>Легкоые</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Марка:</span>
+                    <p>BMW</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Город:</span>
+                    <p>Самарканд</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Тип:</span>
+                    <p>Легкоые</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Марка:</span>
+                    <p>BMW</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Город:</span>
+                    <p>Самарканд</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Тип:</span>
+                    <p>Легкоые</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Марка:</span>
+                    <p>BMW</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Город:</span>
+                    <p>Самарканд</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Тип:</span>
+                    <p>Легкоые</p>
+                </div>
+                <div class="parameterItem">
+                    <span>Марка:</span>
+                    <p>BMW</p>
+                </div>
+            </div>
+        </div>
+        <div class="announcementInfoBottom">
+            <div class="announcementComments">
+                <p class="borderLabel">Коментарии</p>
+                <div class="sendMsg">
+                    <div class="sendMessage">
+                        <img src="./img/msg.png" alt="">
+                        <input placeholder="Оставить комментарии"/>
+                        <button type="submit" style="background-color: transparent">
+                            <img src="./img/send.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="commentsList">
+                    <div class="commentItem">
+                        <div class="commentUser">
+                            <img src="./img/placeholderUser.png" alt=""/>
+                            <div>
+                                <p>Алекса</p>
+                                <span>ID:1290481-024</span>
+                            </div>
+                        </div>
+                        <p class="commentText">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком
+                            из</p>
+                    </div>
+                    <div class="commentItem">
+                        <div class="commentUser">
+                            <img src="./img/placeholderUser.png" alt=""/>
+                            <div>
+                                <p>Алекса</p>
+                                <span>ID:1290481-024</span>
+                            </div>
+                        </div>
+                        <p class="commentText">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком
+                            из</p>
+                    </div>
+                    <div class="commentItem">
+                        <div class="commentUser">
+                            <img src="./img/placeholderUser.png" alt=""/>
+                            <div>
+                                <p>Алекса</p>
+                                <span>ID:1290481-024</span>
+                            </div>
+                        </div>
+                        <p class="commentText">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком
+                            из</p>
+                    </div>
+                    <div class="commentItem">
+                        <div class="commentUser">
+                            <img src="./img/placeholderUser.png" alt=""/>
+                            <div>
+                                <p>Алекса</p>
+                                <span>ID:1290481-024</span>
+                            </div>
+                        </div>
+                        <p class="commentText">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком
+                            из</p>
+                    </div>
+                    <div class="commentItem">
+                        <div class="commentUser">
+                            <img src="./img/placeholderUser.png" alt=""/>
+                            <div>
+                                <p>Алекса</p>
+                                <span>ID:1290481-024</span>
+                            </div>
+                        </div>
+                        <p class="commentText">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком
+                            из</p>
+                    </div>
+                    <div class="commentItem">
+                        <div class="commentUser">
+                            <img src="./img/placeholderUser.png" alt=""/>
+                            <div>
+                                <p>Алекса</p>
+                                <span>ID:1290481-024</span>
+                            </div>
+                        </div>
+                        <p class="commentText">Lorem ipsum — классический текст-«рыба». Является искажённым отрывком
+                            из</p>
+                    </div>
+                </div>
+            </div>
+            <div class="announcementLocation">
+                <p class="borderLabel">Местонахождение на карте</p>
+                <div class="map">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="relatedAnnouncements">
+        <p class="borderLabel">Вам может понравиться</p>
+        <div class="a-center">
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="announcementItem">
+                <img src="./img/img.png"/>
+                <div class="announcementItemContent">
+                    <p class="announcementItemTitle">53 кв/м оффис сдаётся в аренду в</p>
+                    <div>
+                        <p>500 у.е/месяц</p>
+                        <img src="./img/calendar2.png">
+                        <p>20/06/2020</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="mobileApp">
+        <div class="mobileAppLeft">
+            <img src="./img/MobileApp.png" alt=""/>
+            <img src="./img/circles.png" class='circles' alt=""/>
+        </div>
+        <div class="mobileAppRight">
+            <p class='mobileAppTitle'>Download app <br/>from</p>
+            <p>Все бесплатно толька для вас )</p>
+            <div class='downloadLinks'>
+                <div class="downloadLink">
+                    <img src="./img/playmarket.png" alt=""/>
+                    <div>
+                        <p>GET IT ON</p>
+                        <p>Google Play</p>
+                    </div>
+                </div>
+                <div class="downloadLink">
+                    <img src="./img/appstpre.png" alt=""/>
+                    <div>
+                        <p>Available on the</p>
+                        <p>App Store</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="socialsWrapper">
+    <div class="container ">
+        <div class="socials">
+            <img src="./img/logo.png" alt="">
+            <div class="socialLinks">
+                <div class="socialLink">
+                    <img src="./img/fb.png" alt="">
+                    <p>Facebook</p>
+                </div>
+                <div class="socialLink">
+                    <img src="./img/instagram.png" alt="">
+                    <p>Instagram</p>
+                </div>
+                <div class="socialLink">
+                    <img src="./img/tg.png" alt="">
+                    <p>Telegram</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="bordered">
+        <div class="container">
+            <div class="footerCategories">
+                <div class="footerCategory">
+                    <p class="footerCategoryTitle">Транспорт</p>
+                    <div class="footerCategoryLists">
+                        <div class="footerCategoryList">
+                            <p>Легковой</p>
+                            <p>Грузовой</p>
+                            <p>Мото</p>
+                            <p>Автобус</p>
+                            <p>Миниавтобус</p>
+                            <p>Микро автобус</p>
+                            <p>Трактор</p>
+                            <p>Прицепы</p>
+                            <p>Средства Спец.техники</p>
+                        </div>
+                        <div class="footerCategoryList">
+                            <p>Легковой</p>
+                            <p>Грузовой</p>
+                            <p>Мото</p>
+                            <p>Автобус</p>
+                            <p>Миниавтобус</p>
+                            <p>Микро автобус</p>
+                            <p>Трактор</p>
+                            <p>Прицепы</p>
+                            <p>Средства Спец.техники</p>
+                        </div>
+                        <div class="footerCategoryList">
+                            <p>Легковой</p>
+                            <p>Грузовой</p>
+                            <p>Мото</p>
+                            <p>Автобус</p>
+                            <p>Миниавтобус</p>
+                            <p>Микро автобус</p>
+                            <p>Трактор</p>
+                            <p>Прицепы</p>
+                            <p>Средства Спец.техники</p>
+                        </div>
+                        <div class="footerCategoryList">
+                            <p>Легковой</p>
+                            <p>Грузовой</p>
+                            <p>Мото</p>
+                            <p>Автобус</p>
+                            <p>Миниавтобус</p>
+                            <p>Микро автобус</p>
+                            <p>Трактор</p>
+                            <p>Прицепы</p>
+                            <p>Средства Спец.техники</p>
+                        </div>
+                        <div class="footerCategoryList">
+                            <p>Легковой</p>
+                            <p>Грузовой</p>
+                            <p>Мото</p>
+                            <p>Автобус</p>
+                            <p>Миниавтобус</p>
+                            <p>Микро автобус</p>
+                            <p>Трактор</p>
+                            <p>Прицепы</p>
+                            <p>Средства Спец.техники</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="footerCategories">
+            <div class="footerCategory">
+                <p class="footerCategoryTitle">Недвижимость</p>
+                <div class="footerCategoryLists">
+                    <div class="footerCategoryList">
+                        <p>Дачи</p>
+                        <p>Дом</p>
+                        <p>Земля</p>
+                        <p>Квартиры Новостройки</p>
+                        <p>Гаражи / стоянки</p>
+                    </div>
+                    <div class="footerCategoryList">
+                        <p>Кирпичный</p>
+                        <p>Панельный Монолитный</p>
+                        <p>Блочный</p>
+                        <p>Деревянный</p>
+                    </div>
+                    <div class="footerCategoryList">
+                        <p>Смежная</p>
+                        <p>Раздельная</p>
+                        <p>Смежно-раздельная</p>
+                        <p>Студия</p>
+                        <p>Пентхаус</p>
+                        <p>Многоуровневая Малосемейка</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footerCategory">
+                <p class="footerCategoryTitle">Электроника</p>
+                <div class="footerCategoryLists">
+                    <div class="footerCategoryList">
+                        <p>Аудиотехника</p>
+                        <p>Компьютеры</p>
+                        <p>Встраиваемая техника</p>
+                        <p>Гаджеты, планшеты и аксессуары</p>
+                        <p>Игры и игровые приставки</p>
+                        <p>Климатическое оборудование</p>
+                    </div>
+                    <div class="footerCategoryList">
+                        <p>Мобильные телефоны</p>
+                        <p>Прочая электроника</p>
+                        <p>Тв / видеотехника</p>
+                        <p>Техника для кухни </p>
+                        <p>Фото и видео</p>
+                    </div>
+                    <div class="footerCategoryList">
+                        <p>Мобильные телефоны</p>
+                        <p>Прочая электроника</p>
+                        <p>Тв / видеотехника</p>
+                        <p>Техника для кухни </p>
+                        <p>Фото и видео</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./js/libs.min.js"></script>
+<script src="./js/main.min.js"></script>
+</body>
+
+</html>
