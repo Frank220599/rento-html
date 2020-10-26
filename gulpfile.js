@@ -16,55 +16,55 @@ let gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'); //рисует карту слитого воедино файла, чтобы было понятно, что из какого файла бралось
 //favgen = require('gulp-favicons'); //создаём иконки под все типы устройств
 
-gulp.task('scss', function() { //делаем из своего scss-кода css для браузера
+gulp.task('scss', function () { //делаем из своего scss-кода css для браузера
     return gulp.src('src/scss/**/*.scss') //берём все файлы в директории scss и директорий нижнего уровня
         .pipe(sourcemaps.init()) //инициализируем sourcemaps, чтобы он начинал записывать, что из какого файла берётся
-        .pipe(sass({ outputStyle: 'compressed' })) //конвертируем scss в css и импортируем все импорты
-        .pipe(rename({ suffix: '.min' })) //переименовываем файл, чтобы было понятно, что он минифицирован
+        .pipe(sass()) //конвертируем scss в css и импортируем все импорты
+        .pipe(rename({suffix: '.min'})) //переименовываем файл, чтобы было понятно, что он минифицирован
         .pipe(prefixer({ //добавляем вендорные префиксы
             overrideBrowserslist: ['last 8 versions'] //последние 8 версий, но можно донастроить на большее или меньшее значение
         }))
         .pipe(sourcemaps.write()) //записываем карту в итоговый файл
         .pipe(gulp.dest('build/css')) //кладём итоговый файл в директорию build/css
-        .pipe(browserSync.reload({ stream: true })) //обновляем браузер
+        .pipe(browserSync.reload({stream: true})) //обновляем браузер
 });
 
 //Далее будут похожие или полностью аналогичные функции, которые нет смысла расписывать. Смотрите по аналогии с вышеописанными.
 
-gulp.task('style', function() { //создаём единую библиотеку из css-стилей всех плагинов
+gulp.task('style', function () { //создаём единую библиотеку из css-стилей всех плагинов
     return gulp.src([ //указываем, где брать исходники
-            'node_modules/normalize.css/normalize.css',
-            // 'node_modules/bootstrap/dist/css/bootstrap.min.css',
-            // 'node_modules/font-awesome/css/font-awesome.css',
-            'node_modules/swiper/swiper-bundle.min.css',
-            'node_modules/animate.css/animate.min.css'
-            // 'node_modules/slick-carousel/slick/slick.css',
-            // 'node_modules/slick-carousel/slick/slick-theme.css'
-            // 'node_modules/magnific-popup/dist/magnific-popup.css',
-            // 'node_modules/animate.css/animate.css'
-        ])
+        'node_modules/normalize.css/normalize.css',
+        // 'node_modules/bootstrap/dist/css/bootstrap.min.css',
+        // 'node_modules/font-awesome/css/font-awesome.css',
+        'node_modules/swiper/swiper-bundle.min.css',
+        'node_modules/animate.css/animate.min.css'
+        // 'node_modules/slick-carousel/slick/slick.css',
+        // 'node_modules/slick-carousel/slick/slick-theme.css'
+        // 'node_modules/magnific-popup/dist/magnific-popup.css',
+        // 'node_modules/animate.css/animate.css'
+    ])
         .pipe(sourcemaps.init())
         .pipe(concat('libs.min.css')) //склеиваем их в один файл с указанным именем
         .pipe(cssmin()) //минифицируем полученный файл
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('build/css')) //кидаем готовый файл в директорию
-    });
+});
 
 
-    gulp.task('script', function() { //аналогично поступаем с js-файлами
-        return gulp.src([ //тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
-            'node_modules/jquery/dist/jquery.js',
-            'node_modules/swiper/swiper-bundle.min.js',
-            'node_modules/wowjs/dist/wow.js',
-            'node_modules/mixitup/dist/mixitup.min.js'
-            // 'node_modules/bootstrap/dist/js/bootstrap.min.js',
-            // 'src/js/pageScrollToId.js'
-            // 'node_modules/slick-carousel/slick/slick.js',
-            // 'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
-            // 'src/js/jquery.resizeOnApproach.1.0.min.js',
-            // 'node_modules/isotope-layout/dist/isotope.pkgd.js',
-            // 'node_modules/onepage-scroll-jquery/jquery.onepage-scroll.js',
-        ])
+gulp.task('script', function () { //аналогично поступаем с js-файлами
+    return gulp.src([ //тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
+        'node_modules/jquery/dist/jquery.js',
+        'node_modules/swiper/swiper-bundle.min.js',
+        'node_modules/wowjs/dist/wow.js',
+        'node_modules/mixitup/dist/mixitup.min.js'
+        // 'node_modules/bootstrap/dist/js/bootstrap.min.js',
+        // 'src/js/pageScrollToId.js'
+        // 'node_modules/slick-carousel/slick/slick.js',
+        // 'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+        // 'src/js/jquery.resizeOnApproach.1.0.min.js',
+        // 'node_modules/isotope-layout/dist/isotope.pkgd.js',
+        // 'node_modules/onepage-scroll-jquery/jquery.onepage-scroll.js',
+    ])
         .pipe(sourcemaps.init())
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -72,19 +72,19 @@ gulp.task('style', function() { //создаём единую библиотек
         .pipe(gulp.dest('build/js'))
 });
 
-gulp.task('minjs', function() { //минифицируем наш main.js и перекидываем в директорию build
+gulp.task('minjs', function () { //минифицируем наш main.js и перекидываем в директорию build
     return gulp.src(['src/js/main.js'])
-        .pipe(uglify())
-        .pipe(rename({ suffix: '.min' }))
+        // .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('build/js'))
 });
 
-gulp.task('js', function() { //обновляем браузер, если в наших js файлах что-то поменялось
+gulp.task('js', function () { //обновляем браузер, если в наших js файлах что-то поменялось
     return gulp.src('src/js/**/*.js')
-        .pipe(browserSync.reload({ stream: true }))
+        .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('html', function() { //собираем html из кусочков
+gulp.task('html', function () { //собираем html из кусочков
     return gulp.src(['src/**/*.html', '!src/components/**/*.html'])
         .pipe(sourcemaps.init())
         .pipe(include({ //импортируем файлы с префиксом @@. ПРефикс можно настроить под себя.
@@ -93,13 +93,13 @@ gulp.task('html', function() { //собираем html из кусочков
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('build/'))
-        .pipe(browserSync.reload({ stream: true }));
+        .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('fonts', function() { //перекидываем шрифты из директории src в build, а заодно следим за новыми файлами, чтобы обновлять браузер, когда появляется шрифт
+gulp.task('fonts', function () { //перекидываем шрифты из директории src в build, а заодно следим за новыми файлами, чтобы обновлять браузер, когда появляется шрифт
     return gulp.src('src/fonts/**/*.+(eot|svg|ttf|woff|woff2)')
         .pipe(gulp.dest('build/fonts'))
-        .pipe(browserSync.reload({ stream: true }));
+        .pipe(browserSync.reload({stream: true}));
 });
 
 // gulp.task('favicons', function(){ //генератор favicon для всех устройств. Запускается вручную отдельной командой. Генерирует фавиконки на все случаи жизни и файл favicons.html, в котором находятся подключения этих иконок. Скопируйте подключения в файлы проекта и удалите favicons.html Больше нужно для веб-приложений, потому что их ярлыки выносят на главный экран. Сайтам же достаточно закинуть и подключить одну favicon.ico Короче, если вы не уверены, что большинство пользователей мобильных устройств запихнут ярлык вашего сайта на главный экран и разрешат push-уведомления в телефоне, ваша фамилия не Цукерберг и не Дуров - вам этот таск, скорее всего не нужен.
@@ -127,7 +127,7 @@ gulp.task('fonts', function() { //перекидываем шрифты из д�
 //   .pipe(gulp.dest('src/'));
 // });
 
-gulp.task('images', function() { //пережимаем изображения и складываем их в директорию build
+gulp.task('images', function () { //пережимаем изображения и складываем их в директорию build
     return gulp.src('src/img/**/*.+(png|jpg|jpeg|gif|svg|ico)')
         // .pipe(imagemin([
         //     recompress({ //Настройки сжатия изображений. Сейчас всё настроено так, что сжатие почти незаметно для глаза на обычных экранах. Можете покрутить настройки, но за результат не отвечаю.
@@ -141,14 +141,14 @@ gulp.task('images', function() { //пережимаем изображения �
         //     imagemin.svgo()
         // ]))
         .pipe(gulp.dest('build/img'))
-        .pipe(browserSync.reload({ stream: true }));
+        .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('deletefonts', function() { //задачи для очистки директории со шрифтами в build. Нужна для того, чтобы удалить лишнее.
+gulp.task('deletefonts', function () { //задачи для очистки директории со шрифтами в build. Нужна для того, чтобы удалить лишнее.
     return del('build/fonts/**/*.*');
 });
 
-gulp.task('deleteimg', function() { //аналогично предыдущей, но с картинками.
+gulp.task('deleteimg', function () { //аналогично предыдущей, но с картинками.
     return del('build/img/**/*.*');
 });
 
@@ -157,8 +157,7 @@ gulp.task('cleanfonts', gulp.series('deletefonts', 'fonts')); //задачи н�
 gulp.task('cleanimg', gulp.series('deleteimg', 'images')); //задачи нужна для того, чтобы сразу очистить директорию и залить картинки по-новой
 
 
-
-gulp.task('watch', function() { //Следим за изменениями в файлах и директориях и запускаем задачи, если эти изменения произошли
+gulp.task('watch', function () { //Следим за изменениями в файлах и директориях и запускаем задачи, если эти изменения произошли
     gulp.watch('src/scss/**/*.scss', gulp.parallel('scss'));
     gulp.watch('src/**/*.html', gulp.parallel('html'));
     gulp.watch('src/fonts/**/*.*', gulp.parallel('fonts'));
@@ -167,8 +166,7 @@ gulp.task('watch', function() { //Следим за изменениями в ф
 });
 
 
-
-gulp.task('browser-sync', function() { //настройки лайв-сервера
+gulp.task('browser-sync', function () { //настройки лайв-сервера
     browserSync.init({
         server: {
             baseDir: "build/" //какую папку показывать в браузере

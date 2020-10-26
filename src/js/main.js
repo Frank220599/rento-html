@@ -85,7 +85,7 @@ function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
-        reader.onload = function(e) {
+        reader.onload = function (e) {
             $('#profileImage').attr('src', e.target.result);
         }
 
@@ -93,10 +93,31 @@ function readURL(input) {
     }
 }
 
-$("#imgInp").change(function() {
+$("#imgInp").change(function () {
     readURL(this);
 });
 
-$('#regionFilter').on('click', function () {
-    $(this).next().toggleClass('active')
+$(".customInputWrapper").on("click", function () {
+    $(this)
+        .closest(".filtersContainer")
+        .find(".dropdownFilters > .filterDropdown")
+        .eq($(this).index())
+        .toggleClass("active")
+        .siblings()
+        .removeClass("active");
+});
+
+$(".filterDropdown p").on("click", function () {
+
+    $(this)
+        .addClass('active')
+        .siblings()
+        .removeClass('active')
+        .parent()
+        .parent()
+        .parent()
+        .find(".customInputWrapper")
+        .eq($(this).parent().index())
+        .find('input')
+        .val(this.textContent);
 });
