@@ -97,7 +97,7 @@ $("#imgInp").change(function () {
     readURL(this);
 });
 
-$(".customInputWrapper").on("click", function () {
+$(".customInputWrapper.dropDown").on("click", function () {
     $(this)
         .closest(".filtersContainer")
         .find(".dropdownFilters > .filterDropdown")
@@ -120,4 +120,6 @@ $(".filterDropdown p").on("click", function () {
         .eq($(this).parent().index())
         .find('input')
         .val(this.textContent);
+
+    $(this).parent().removeClass('active')
 });

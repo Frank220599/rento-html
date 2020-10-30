@@ -808,8 +808,9 @@ a {
     display: flex;
     margin-left: auto;
 
-    div {
+    div, button {
       @extend .f-center;
+      cursor: pointer;
       margin-left: 10px;
       background: $blue;
       height: 42px;
