@@ -239,6 +239,12 @@ a {
 }
 
 .footerCategory {
+
+  .footerCategories {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .footerCategoryTitle {
     font-size: 26px;
     font-weight: 900;
@@ -252,6 +258,9 @@ a {
 
   .footerCategoryList {
     margin-right: 50px;
+    display: flex;
+
+    flex-direction: row;
 
   }
 }
@@ -261,6 +270,7 @@ a {
   flex-wrap: wrap;
 
   p {
+    width: 25%;
     margin-bottom: 15px;
     font-size: 14px;
     font-weight: 900;
@@ -839,6 +849,14 @@ a {
   margin: 0 auto 130px;
   overflow: hidden;
   position: relative;
+
+  .chatUsers {
+  }
+}
+
+.chatUsersWrapper {
+  //overflow-y: scroll;
+
 }
 
 .chatUserItem {
@@ -850,6 +868,7 @@ a {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   height: 70px;
+
 
   .chatUserInfo {
     @extend .a-center;
@@ -894,9 +913,9 @@ a {
   overflow-y: scroll;
   position: relative;
 
-  &::-webkit-scrollbar {
-    width: 0;
-  }
+  //&::-webkit-scrollbar {
+  //  width: 0;
+  //}
 
 }
 
@@ -945,6 +964,7 @@ a {
   padding-left: 25px;
   padding-right: 25px;
   height: 535px;
+  overflow-y: scroll;
 }
 
 .messageItem {
@@ -1300,8 +1320,8 @@ a {
     height: 206px;
     background: #ffffff;
     box-sizing: border-box;
-    flex: 1
-
+    flex: 1;
+    overflow-x: scroll;
   }
 
   .middleTitle {

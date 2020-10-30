@@ -116,7 +116,7 @@ $(".filterDropdown p").on("click", function () {
         .parent()
         .parent()
         .parent()
-        .find(".customInputWrapper")
+        .find(".customInputWrapper.dropDown")
         .eq($(this).parent().index())
         .find('input')
         .val(this.textContent);
