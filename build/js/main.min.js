@@ -1,3 +1,4 @@
+
 $('.toggleCategories').children('p').on('click', function (e) {
     var cat = $('.mainCategoriesList');
     cat.toggleClass('active');
@@ -97,29 +98,29 @@ $("#imgInp").change(function () {
     readURL(this);
 });
 
-$(".customInputWrapper.dropDown").on("click", function () {
-    $(this)
-        .closest(".filtersContainer")
-        .find(".dropdownFilters > .filterDropdown")
-        .eq($(this).index())
-        .toggleClass("active")
-        .siblings()
-        .removeClass("active");
-});
+// $(".customInputWrapper.dropDown").on("click", function () {
+//     $(this)
+//         .closest(".filtersContainer")
+//         .find(".dropdownFilters > .filterDropdown")
+//         .eq($(this).index())
+//         .toggleClass("active")
+//         .siblings()
+//         .removeClass("active");
+// });
 
-$(".filterDropdown p").on("click", function () {
-
-    $(this)
-        .addClass('active')
-        .siblings()
-        .removeClass('active')
-        .parent()
-        .parent()
-        .parent()
-        .find(".customInputWrapper.dropDown")
-        .eq($(this).parent().index())
-        .find('input')
-        .val(this.textContent);
-
-    $(this).parent().removeClass('active')
-});
+// $(".filterDropdown p").on("click", function () {
+//
+//     $(this)
+//         .addClass('active')
+//         .siblings()
+//         .removeClass('active')
+//         .parent()
+//         .parent()
+//         .parent()
+//         .find(".customInputWrapper.dropDown")
+//         .eq($(this).parent().index())
+//         .find('input')
+//         .val(this.textContent);
+//
+//     $(this).parent().removeClass('active')
+// });

@@ -1574,7 +1574,7 @@ a {
 }
 
 .addPhoto {
-  height: 120px;
+  height: 160px;
   background: transparent;
   border: 1px solid #2196F3;
   box-sizing: border-box;
@@ -1583,8 +1583,11 @@ a {
   flex: 1;
   margin-bottom: 30px;
 
-  .itemList {
+  .itemList, .preview {
     display: flex;
+    overflow-x: scroll;
+    flex: 1;
+    padding-bottom: 20px;
   }
 }
 
@@ -2355,3 +2358,16 @@ input:checked + .slider:before {
 }
 
 
+.customInput {
+  position: relative;
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    flex: 1;
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+}

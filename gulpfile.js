@@ -34,14 +34,9 @@ gulp.task('scss', function () { //делаем из своего scss-кода c
 gulp.task('style', function () { //создаём единую библиотеку из css-стилей всех плагинов
     return gulp.src([ //указываем, где брать исходники
         'node_modules/normalize.css/normalize.css',
-        // 'node_modules/bootstrap/dist/css/bootstrap.min.css',
-        // 'node_modules/font-awesome/css/font-awesome.css',
         'node_modules/swiper/swiper-bundle.min.css',
         'node_modules/animate.css/animate.min.css'
-        // 'node_modules/slick-carousel/slick/slick.css',
-        // 'node_modules/slick-carousel/slick/slick-theme.css'
-        // 'node_modules/magnific-popup/dist/magnific-popup.css',
-        // 'node_modules/animate.css/animate.css'
+
     ])
         .pipe(sourcemaps.init())
         .pipe(concat('libs.min.css')) //склеиваем их в один файл с указанным именем
@@ -55,15 +50,6 @@ gulp.task('script', function () { //аналогично поступаем с j
     return gulp.src([ //тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
         'node_modules/jquery/dist/jquery.js',
         'node_modules/swiper/swiper-bundle.min.js',
-        'node_modules/wowjs/dist/wow.js',
-        'node_modules/mixitup/dist/mixitup.min.js'
-        // 'node_modules/bootstrap/dist/js/bootstrap.min.js',
-        // 'src/js/pageScrollToId.js'
-        // 'node_modules/slick-carousel/slick/slick.js',
-        // 'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
-        // 'src/js/jquery.resizeOnApproach.1.0.min.js',
-        // 'node_modules/isotope-layout/dist/isotope.pkgd.js',
-        // 'node_modules/onepage-scroll-jquery/jquery.onepage-scroll.js',
     ])
         .pipe(sourcemaps.init())
         .pipe(concat('libs.min.js'))
