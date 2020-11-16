@@ -721,6 +721,7 @@ a {
   font-weight: 900;
   margin-bottom: 4px;
   text-transform: capitalize;
+  white-space: nowrap;
 }
 
 .customInputWrapper {
@@ -740,9 +741,20 @@ a {
     box-sizing: border-box;
     background: #ffffff;
     border-radius: 4px;
-    padding-left: 15px;
-    padding-right: 20px;
+    //padding-right: 20px;
     height: 50px;
+
+    input, .select2 {
+      padding-left: 15px;
+      padding-right: 20px;
+      border: none !important;
+      outline: none !important;
+    }
+
+    img {
+      position: absolute;
+      right: 20px;
+    }
   }
 
   input {
@@ -1052,6 +1064,9 @@ a {
   border-radius: 4px;
   padding: 20px;
   overflow: hidden;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 
 .announcementInfoBlock {
@@ -2058,6 +2073,7 @@ input:checked + .slider:before {
 .gallery-top {
   height: 400px;
   width: 100%;
+  margin-bottom: 20px;
 
   .swiper-slide {
     width: 100% !important;
@@ -2360,6 +2376,7 @@ input:checked + .slider:before {
 
 .customInput {
   position: relative;
+
   select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -2370,4 +2387,26 @@ input:checked + .slider:before {
     border: none;
     outline: none;
   }
+}
+
+.commentsList {
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.select2-selection__arrow {
+  display: none;
+}
+
+.select2-selection {
+  border: none !important;
+}
+
+.select2-search {
+  display: none !important;
+}
+
+.select2 {
+  outline: none !important;
+  border: none !important;
 }

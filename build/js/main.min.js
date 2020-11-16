@@ -1,4 +1,3 @@
-
 $('.toggleCategories').children('p').on('click', function (e) {
     var cat = $('.mainCategoriesList');
     cat.toggleClass('active');
@@ -98,29 +97,21 @@ $("#imgInp").change(function () {
     readURL(this);
 });
 
-// $(".customInputWrapper.dropDown").on("click", function () {
-//     $(this)
-//         .closest(".filtersContainer")
-//         .find(".dropdownFilters > .filterDropdown")
-//         .eq($(this).index())
-//         .toggleClass("active")
-//         .siblings()
-//         .removeClass("active");
-// });
+$('.pop_up_sort_inner span').on('click', function () {
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+})
 
-// $(".filterDropdown p").on("click", function () {
-//
-//     $(this)
-//         .addClass('active')
-//         .siblings()
-//         .removeClass('active')
-//         .parent()
-//         .parent()
-//         .parent()
-//         .find(".customInputWrapper.dropDown")
-//         .eq($(this).parent().index())
-//         .find('input')
-//         .val(this.textContent);
-//
-//     $(this).parent().removeClass('active')
-// });
+$(".customInput > select").select2({
+    width: '100%',
+});
+
+
+$(function () {
+    $("#datepicker").datepicker();
+    $("#datepicker2").datepicker();
+
+    $("#categoriesSelect").menu();
+    $("#regionsSelect").menu();
+
+});

@@ -35,8 +35,8 @@ gulp.task('style', function () { //создаём единую библиоте�
     return gulp.src([ //указываем, где брать исходники
         'node_modules/normalize.css/normalize.css',
         'node_modules/swiper/swiper-bundle.min.css',
-        'node_modules/animate.css/animate.min.css'
-
+        'node_modules/animate.css/animate.min.css',
+        'node_modules/select2/dist/css/select2.css',
     ])
         .pipe(sourcemaps.init())
         .pipe(concat('libs.min.css')) //склеиваем их в один файл с указанным именем
@@ -50,6 +50,7 @@ gulp.task('script', function () { //аналогично поступаем с j
     return gulp.src([ //тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
         'node_modules/jquery/dist/jquery.js',
         'node_modules/swiper/swiper-bundle.min.js',
+        'node_modules/select2/dist/js/select2.min.js',
     ])
         .pipe(sourcemaps.init())
         .pipe(concat('libs.min.js'))
