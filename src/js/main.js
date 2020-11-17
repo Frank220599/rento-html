@@ -38,7 +38,7 @@ $('#title').on('keyup', function (e) {
     }
 });
 
-$('.filter').children('p').on('click', function () {
+$('.filter').children('label').on('click', function () {
     if (this.textContent === 'Аренда') {
         $('.selectDate1').show();
         $('.selectDate2').show();
@@ -97,7 +97,7 @@ $("#imgInp").change(function () {
     readURL(this);
 });
 
-$('.pop_up_sort_inner span').on('click', function () {
+$('.pop_up_sort_inner label').on('click', function () {
     $(this).siblings().removeClass('active');
     $(this).addClass('active');
 })

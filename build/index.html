@@ -72,10 +72,10 @@
                 <img src="./img/logo.png">
             </a>
             <div class="filter">
-                <p class="active">Аренда</p>
-                <p>С выкупом</p>
-                <p>Продаётся</p>
-                <p>Отдам даром</p>
+                <label for="type1" class="active">Аренда</label>
+                <label for="type2">С выкупом</label>
+                <label for="type3">Продаётся</label>
+                <label for="type4">Отдам даром</label>
             </div>
             <a class="button">
                 <p>+ Подать объявления</p>
@@ -310,14 +310,14 @@
                     <img src="./img/sort.png">
                     <p>Сотировать</p>
                     <div class="pop_up_sort_inner">
-                        <span class="active">
+                        <label for="sort1" class="active">
                             <img src="./img/desc.svg" alt="">
                             <p>По убивание</p>
-                        </span>
-                        <span>
+                        </label>
+                        <label for="sort2">
                             <img src="./img/desc.svg" alt="">
                             <p>По возрастанию</p>
-                        </span>
+                        </label>
                     </div>
                 </div>
 
@@ -473,6 +473,14 @@
                     </label>
                 </div>
             </div>
+        </div>
+        <div style="display: none">
+            <input type="radio" id="type1" name="type">
+            <input type="radio" id="type2" name="type">
+            <input type="radio" id="type3" name="type">
+            <input type="radio" id="type4" name="type">
+            <input type="radio" id="sort1" name="sort">
+            <input type="radio" id="sort2" name="sort">
         </div>
         <div class="filterSave">
             <div class="addAnnSave">
