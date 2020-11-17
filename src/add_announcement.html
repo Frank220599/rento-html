@@ -91,18 +91,22 @@
     <form class="container">
         <div class="annForm">
             <div class="annType">
-                <div class="selected">
+                <label class="selected">
+                    <input type="radio">
                     <p>Аренда</p>
-                </div>
-                <div>
+                </label>
+                <label>
+                    <input type="radio">
                     <p>С выкупом</p>
-                </div>
-                <div>
+                </label>
+                <label>
+                    <input type="radio">
                     <p>Продаётся</p>
-                </div>
-                <div>
+                </label>
+                <label>
+                    <input type="radio">
                     <p>Отдам даром</p>
-                </div>
+                </label>
             </div>
             <div class="topForm">
                 <div>
@@ -200,18 +204,15 @@
                     </div>
                     <div>
                         <img src="./img/mountaines.png" alt="">
-                        <button>
+                        <label>
+                            <input id="imageUpload" type="file" multiple accept="image/*">
                             <img src="./img/upload.png" alt="">
                             <p>Загрузить фото</p>
-                        </button>
+                        </label>
                     </div>
                 </div>
-                <div class="preview">
-                    <img src="./img/img.png" alt="" class="previewImg">
-                    <img src="./img/img.png" alt="" class="previewImg">
-                    <img src="./img/img.png" alt="" class="previewImg">
-                    <img src="./img/img.png" alt="" class="previewImg">
-                    <img src="./img/img.png" alt="" class="previewImg">
+                <div class="preview" id="imgPreview">
+
                 </div>
             </div>
             <div class="addPhoto">
@@ -222,33 +223,19 @@
                     </div>
                     <div>
                         <img src="./img/docs.png" alt="">
-                        <button>
+                        <label>
+                            <input
+                                    id="documentsUpload"
+                                    type="file"
+                                    multiple
+                                    accept=".pdf,.doc,.xlsx,.xls,.dosx"
+                            >
                             <img src="./img/upload.png" alt="">
                             <p>Загрузить фото</p>
-                        </button>
+                        </label>
                     </div>
                 </div>
-                <div class="itemList">
-                    <div class="documentItem">
-                        <img src="./img/excel.png" alt="">
-                        <p>Приказ об устоновление
-                            домашных условиях...</p>
-                    </div>
-                    <div class="documentItem">
-                        <img src="./img/powerpoint.png" alt="">
-                        <p>Приказ об устоновление
-                            домашных условиях...</p>
-                    </div>
-                    <div class="documentItem">
-                        <img src="./img/word.png" alt="">
-                        <p>Приказ об устоновление
-                            домашных условиях...</p>
-                    </div>
-                    <div class="documentItem">
-                        <img src="./img/word.png" alt="">
-                        <p>Приказ об устоновление
-                            домашных условиях...</p>
-                    </div>
+                <div class="itemList" id="documentPreview">
                 </div>
             </div>
             <div class="addAnnSave">

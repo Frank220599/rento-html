@@ -20,14 +20,14 @@ $('#dr').on('click', function (e) {
     $('.dropdownMenu').toggleClass('active');
 });
 
-$('.annType').children('div').on('click', function (e) {
+$('.annType').children('label').on('click', function (e) {
     if (e.target.nodeName === 'P') {
-        $(e.target).parent().siblings().removeClass('selected');
-        $(e.target).parent().addClass('selected');
+        $(this).siblings().removeClass('selected');
+        $(this).addClass('selected');
         return;
     }
-    $(e.target).siblings().removeClass('selected');
-    $(e.target).addClass('selected');
+    $(this).siblings().removeClass('selected');
+    $(this).addClass('selected');
 });
 
 $('#title').on('keyup', function (e) {
@@ -115,3 +115,55 @@ $(function () {
     $("#regionsSelect").menu();
 
 });
+
+$('#imageUpload').on('change', function (e) {
+    const files = e.target.files
+    $(this).innerHTML = '';
+
+    for (let i = 0; i < files.length; i++) {
+        var image = document.createElement('img');
+        var appendet = $('#imgPreview').append(image);
+    }
+
+    for (let i = 0; i < files.length; i++) {
+        var reader = new FileReader();
+        var images = document.querySelectorAll('#imgPreview > img')
+        reader.onload = function (e) {
+            $(images[i]).attr('src', e.target.result);
+            $(images[i]).addClass('previewImg');
+        }
+
+        reader.readAsDataURL(e.target.files[i]); // convert to base64 string
+    }
+})
+
+
+$('#documentsUpload').on('change', function (e) {
+    const files = e.target.files
+    $(this).innerHTML = '';
+
+    for (let i = 0; i < files.length; i++) {
+        var file = files[i];
+        var extention = file.name.split('.');
+        var extName = extention[extention.length - 1];
+        var image;
+
+        if (extName === 'pdf') {
+            image = 'powerpoint';
+        } else if (extName === 'xslx' || extName === 'xsl') {
+            image = 'excel';
+        }  else {
+            image = 'word';
+        }
+
+        var elem = `
+                <div class="documentItem">
+                    <img src="./img/${image}.png" alt="">
+                    <p>${file.name}</p>
+                </div> 
+        `
+        $('#documentPreview').append(elem);
+    }
+
+
+})

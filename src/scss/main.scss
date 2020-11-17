@@ -1480,12 +1480,16 @@ a {
   border-radius: 4px;
   margin-bottom: 35px;
 
-  div {
+  label {
     @extend .f-center;
     width: 25%;
     height: 50px;
     border-radius: 4px;
     cursor: pointer;
+
+    input {
+      display: none;
+    }
 
     p {
       font-size: 18px;
@@ -1601,8 +1605,9 @@ a {
   .itemList, .preview {
     display: flex;
     overflow-x: scroll;
+    height: 120px;
     flex: 1;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 }
 
@@ -1613,6 +1618,8 @@ a {
 
   div:first-child {
     margin-bottom: 6px;
+
+
 
     p {
       font-size: 14px;
@@ -1640,6 +1647,10 @@ a {
     border-radius: 4px;
     padding-left: 34px;
     padding-right: 34px;
+
+    input {
+      display: none;
+    }
 
     img {
       margin-right: 6px;
@@ -2409,4 +2420,18 @@ input:checked + .slider:before {
 .select2 {
   outline: none !important;
   border: none !important;
+}
+
+#select2-selection__rendered {
+  outline: none !important;
+}
+
+span[class^="select2"] {
+  outline: none !important;
+  border: none !important;
+}
+
+
+#select2-selection__rendered:focus {
+  outline: none !important;
 }
