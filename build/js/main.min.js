@@ -150,7 +150,7 @@ $('#documentsUpload').on('change', function (e) {
 
         if (extName === 'pdf') {
             image = 'powerpoint';
-        } else if (extName === 'xslx' || extName === 'xsl') {
+        } else if (extName === 'xlsx' || extName === 'xls') {
             image = 'excel';
         }  else {
             image = 'word';
