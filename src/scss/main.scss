@@ -4,7 +4,7 @@
 @import "layout";
 
 body {
-  background: #e5e5e5;
+  background: #F5F6F7;
   font-family: 'Cera Pro';
   color: $blue;
 }
@@ -1176,16 +1176,32 @@ a {
     color: #ffffff;
     font-weight: 900;
     height: 50px;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    &:hover {
+      color: $green;
+      background-color: #fff;
+      border: 1px solid $green;
+    }
   }
 
   div {
+    border: 1px solid transparent;
     @extend .f-center;
     height: 50px;
-    background: #2196F3;
+    background-color: $lightblue;
+    cursor: pointer;
     border-radius: 4px;
     width: 48%;
     color: #ffffff;
     font-weight: 900;
+
+    &:hover {
+      color: $lightblue;
+      background-color: #fff;
+      border: 1px solid $lightblue;
+    }
   }
 }
 
@@ -1582,7 +1598,8 @@ a {
     margin-left: 0 !important;
 
     input {
-      width: 80px;
+      //flex: 1;
+      width: 100%;
     }
 
     img {
@@ -1590,6 +1607,10 @@ a {
       right: 15px;
     }
   }
+}
+
+.searchButton {
+  color: $blue;
 }
 
 .addPhoto {
@@ -1618,7 +1639,6 @@ a {
 
   div:first-child {
     margin-bottom: 6px;
-
 
 
     p {
@@ -1820,7 +1840,7 @@ a {
     }
 
     .dropDownLinks {
-      padding-left: 26px;
+
       display: flex;
       border-radius: 4px;
       background: #ffffff;
@@ -1828,10 +1848,18 @@ a {
       font-weight: 900;
       font-size: 16px;
       color: $blue;
-      margin-top: 20px;
+      margin-top: 10px;
+      padding-bottom: 10px;
 
       a {
-        padding: 12px 0;
+        padding: 12px 26px;
+        cursor: pointer;
+
+        &:hover {
+          //color: $green;
+          background-color: rgba(33, 150, 243, .2);
+          //border: 1px solid $green;
+        }
       }
     }
   }
@@ -2434,4 +2462,33 @@ span[class^="select2"] {
 
 #select2-selection__rendered:focus {
   outline: none !important;
+}
+
+.ui-menu-item-wrapper {
+  font-weight: 900 !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.ui-state-active {
+  background-color: rgba(33, 150, 243, 0.2) !important;
+  color: $blue !important;
+  border: none !important;
+}
+
+.ui-menu {
+  border: none !important;
+}
+
+.addAnnSave {
+  button {
+    cursor: pointer;
+
+    &:last-child {
+      &:hover {
+        background-color: $lightblue;
+        color: #fff;
+      }
+    }
+  }
 }
