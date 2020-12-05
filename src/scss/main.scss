@@ -164,6 +164,7 @@ a {
 }
 
 .downloadLink {
+  display: inline-flex;
   @extend .a-center;
   padding-left: 20px;
   width: 43%;
@@ -223,6 +224,7 @@ a {
 .footer {
   .footerCategories {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .container {
@@ -238,45 +240,86 @@ a {
   }
 }
 
-.footerCategory {
-
-  .footerCategories {
+.footer {
+  &Block {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -70px;
   }
 
-  .footerCategoryTitle {
-    font-size: 26px;
-    font-weight: 900;
-    margin-bottom: 17px;
+  &Item {
+    padding: 0 70px;
+    margin-bottom: 30px;
+
+    &Title {
+      font-size: 26px;
+      font-weight: 900;
+      margin: 0;
+      margin-bottom: 17px;
+    }
   }
-}
 
-.footerCategoryLists {
-  display: flex;
-  flex-wrap: wrap;
-
-  .footerCategoryList {
-    margin-right: 50px;
+  &Links {
     display: flex;
+    margin: 0 -25px;
 
-    flex-direction: row;
+    & ul {
+      list-style: none;
+      padding: 0 25px;
+    }
 
+    & li {
+      margin: 10px 0;
+    }
   }
 }
 
-.footerCategoryList {
-  margin-left: 5px;
-  flex-wrap: wrap;
 
-  p {
-    width: 25%;
-    margin-bottom: 15px;
-    font-size: 14px;
-    font-weight: 900;
-    color: rgba(15, 65, 104, 0.7);
-  }
-}
+//.footerCategory {
+//  margin-right: 40px;
+//
+//  .footerCategories {
+//    display: flex;
+//    flex-wrap: wrap;
+//  }
+//
+//  .footerCategoryTitle {
+//    font-size: 26px;
+//    font-weight: 900;
+//    margin-bottom: 17px;
+//  }
+//}
+//
+//.footerCategoryLists {
+//  display: flex;
+//  flex-wrap: wrap;
+//
+//  .footerCategoryList {
+//    margin-right: 50px;
+//    display: flex;
+//
+//    flex-direction: column;
+//
+//    & a {
+//      display: block;
+//      margin: 10px 0;
+//    }
+//
+//  }
+//}
+
+//.footerCategoryList {
+//  margin-left: 5px;
+//  flex-wrap: wrap;
+//
+//  p {
+//    width: 25%;
+//    margin-bottom: 15px;
+//    font-size: 14px;
+//    font-weight: 900;
+//    color: rgba(15, 65, 104, 0.7);
+//  }
+//}
 
 .mainFilter {
   @extend .a-center;
@@ -1023,6 +1066,11 @@ a {
   margin-left: 25px;
   margin-right: 25px;
   border-radius: 4px;
+
+  form {
+    display: flex;
+    flex: 1;
+  }
 
   input {
     flex: 1;
